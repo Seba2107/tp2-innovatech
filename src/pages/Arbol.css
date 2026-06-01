@@ -1,0 +1,234 @@
+.arbol {
+  min-height: 100vh;
+  background: #0a0a0c;
+  background-image:
+    linear-gradient(rgba(42,42,54,0.5) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(42,42,54,0.5) 1px, transparent 1px);
+  background-size: 64px 64px;
+  font-family: 'Courier New', monospace;
+  padding-bottom: 60px;
+}
+
+.arbol-header {
+  padding: 40px 60px 30px;
+  border-bottom: 1px solid #1a1a1a;
+}
+
+.arbol-label {
+  font-size: 10px;
+  color: #0099cc;
+  letter-spacing: 4px;
+  margin-bottom: 8px;
+}
+
+.arbol-titulo {
+  font-family: 'Bebas Neue', 'Courier New', monospace;
+  font-size: clamp(3rem, 7vw, 6rem);
+  color: #fff;
+  letter-spacing: 4px;
+  line-height: 1;
+  text-shadow: 0 0 40px rgba(0,153,204,0.3);
+}
+
+.arbol-sub {
+  font-size: 11px;
+  color: #555;
+  letter-spacing: 3px;
+  margin-top: 8px;
+}
+
+.arbol-content {
+  padding: 40px 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.arbol-section-label {
+  font-size: 10px;
+  color: #0099cc;
+  letter-spacing: 4px;
+  margin-bottom: 24px;
+}
+
+/* ÁRBOL */
+.arbol-tree {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+.tree-level {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  width: 100%;
+}
+
+.tree-connector {
+  width: 2px;
+  height: 30px;
+  background: #0099cc;
+  opacity: 0.4;
+  margin: 0 auto;
+}
+
+.tree-connector-split {
+  width: 80%;
+  height: 30px;
+  border-left: 2px solid #0099cc44;
+  border-right: 2px solid #0099cc44;
+  border-bottom: 2px solid #0099cc44;
+  margin: 0 auto;
+}
+
+/* NODOS */
+.tree-node {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 12px 20px;
+  border: 1px solid #1a1a1a;
+  background: #0d0d0d;
+  min-width: 140px;
+  text-align: center;
+  transition: all 0.2s;
+}
+
+.tree-node:hover {
+  transform: translateY(-2px);
+}
+
+.node-tag {
+  font-size: 11px;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+.node-desc {
+  font-size: 8px;
+  color: #444;
+  letter-spacing: 1px;
+}
+
+/* Colores por tipo */
+.tree-node.root {
+  border-color: #ffaa00;
+  box-shadow: 0 0 20px rgba(255,170,0,0.1);
+}
+.tree-node.root .node-tag { color: #ffaa00; }
+
+.tree-node.app {
+  border-color: #0099cc;
+  box-shadow: 0 0 20px rgba(0,153,204,0.1);
+}
+.tree-node.app .node-tag { color: #0099cc; }
+
+.tree-node.intro {
+  border-color: #cc1100;
+}
+.tree-node.intro .node-tag { color: #cc1100; }
+
+.tree-node.layout {
+  border-color: #88cc00;
+}
+.tree-node.layout .node-tag { color: #88cc00; }
+
+.tree-node.nodo-sidebar {
+  border-color: #0099cc;
+}
+.tree-node.nodo-sidebar .node-tag { color: #0099cc; }
+
+.tree-node.routes {
+  border-color: #88cc00;
+}
+.tree-node.routes .node-tag { color: #88cc00; }
+
+.tree-node.page {
+  border-color: #2a2a36;
+  min-width: 120px;
+}
+.tree-node.page .node-tag { color: #aaa; }
+
+.tree-node.page:hover {
+  border-color: #0099cc;
+}
+
+/* LEYENDA */
+.leyenda-grid {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.leyenda-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 11px;
+  color: #666;
+  letter-spacing: 1px;
+}
+
+.leyenda-color {
+  width: 14px;
+  height: 14px;
+  border: 1px solid;
+}
+
+.root-color { border-color: #ffaa00; background: #ffaa0011; }
+.app-color  { border-color: #0099cc; background: #0099cc11; }
+.intro-color { border-color: #cc1100; background: #cc110011; }
+.page-color { border-color: #2a2a36; background: #0d0d0d; }
+
+/* HOOKS */
+.hooks-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.hook-card {
+  background: #0d0d0d;
+  border: 1px solid #1a1a1a;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: all 0.2s;
+}
+
+.hook-card:hover {
+  border-color: #0099cc;
+  box-shadow: 0 0 20px rgba(0,153,204,0.1);
+}
+
+.hook-nombre {
+  font-family: 'Bebas Neue', 'Courier New', monospace;
+  font-size: 1.4rem;
+  color: #0099cc;
+  letter-spacing: 2px;
+}
+
+.hook-desc {
+  font-size: 11px;
+  color: #666;
+  line-height: 1.7;
+  letter-spacing: 0.5px;
+}
+
+.hook-count {
+  font-size: 9px;
+  color: #333;
+  letter-spacing: 2px;
+}
+
+@media (max-width: 900px) {
+  .arbol-header { padding: 30px 24px; }
+  .arbol-content { padding: 30px 24px; }
+  .level-pages { flex-wrap: wrap; }
+  .hooks-grid { grid-template-columns: 1fr; }
+  .tree-connector-split { width: 90%; }
+}

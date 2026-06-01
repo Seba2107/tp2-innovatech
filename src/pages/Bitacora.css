@@ -1,0 +1,245 @@
+.bitacora {
+  min-height: 100vh;
+  background: #0a0a0c;
+  background-image:
+    linear-gradient(rgba(42,42,54,0.5) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(42,42,54,0.5) 1px, transparent 1px);
+  background-size: 64px 64px;
+  font-family: 'Courier New', monospace;
+  padding-bottom: 60px;
+}
+
+.bitacora-header {
+  padding: 40px 60px 30px;
+  border-bottom: 1px solid #1a1a1a;
+}
+
+.bitacora-label {
+  font-size: 10px;
+  color: #0099cc;
+  letter-spacing: 4px;
+  margin-bottom: 8px;
+}
+
+.bitacora-titulo {
+  font-family: 'Bebas Neue', 'Courier New', monospace;
+  font-size: clamp(3rem, 7vw, 6rem);
+  color: #fff;
+  letter-spacing: 4px;
+  line-height: 1;
+  text-shadow: 0 0 40px rgba(0,153,204,0.3);
+}
+
+.bitacora-sub {
+  font-size: 11px;
+  color: #555;
+  letter-spacing: 3px;
+  margin-top: 8px;
+}
+
+.bitacora-section-label {
+  font-size: 10px;
+  color: #0099cc;
+  letter-spacing: 4px;
+  margin-bottom: 24px;
+  padding: 0 60px;
+}
+
+/* MIGRACIÓN */
+.bitacora-migracion {
+  padding: 40px 0;
+  border-bottom: 1px solid #1a1a1a;
+}
+
+.migracion-grid {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 0 60px;
+}
+
+.migracion-card {
+  flex: 1;
+  background: #0d0d0d;
+  border: 1px solid #1a1a1a;
+  padding: 24px;
+}
+
+.migracion-card.react {
+  border-color: #0099cc;
+  box-shadow: 0 0 20px rgba(0,153,204,0.1);
+}
+
+.migracion-titulo {
+  font-family: 'Bebas Neue', 'Courier New', monospace;
+  font-size: 1.2rem;
+  color: #fff;
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #1a1a1a;
+}
+
+.migracion-card.react .migracion-titulo {
+  color: #0099cc;
+}
+
+.migracion-lista {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.migracion-lista li {
+  font-size: 11px;
+  color: #666;
+  letter-spacing: 1px;
+  padding-left: 14px;
+  position: relative;
+  line-height: 1.6;
+}
+
+.migracion-lista li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: #0099cc;
+}
+
+.migracion-arrow {
+  font-size: 2rem;
+  color: #0099cc;
+  flex-shrink: 0;
+}
+
+/* ENTRADAS */
+.bitacora-entradas {
+  padding: 40px 0;
+  border-bottom: 1px solid #1a1a1a;
+}
+
+.bita-entry {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  border-bottom: 1px solid #111;
+  transition: background 0.2s;
+  margin: 0 60px;
+}
+
+.bita-entry:hover {
+  background: #0d0d0d;
+}
+
+.bita-left {
+  padding: 24px 20px 24px 0;
+  border-right: 1px solid #1a1a1a;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.bita-semana {
+  font-size: 10px;
+  color: #0099cc;
+  letter-spacing: 2px;
+}
+
+.bita-fecha {
+  font-size: 9px;
+  color: #333;
+  letter-spacing: 1px;
+}
+
+.bita-right {
+  padding: 24px 0 24px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.bita-titulo {
+  font-family: 'Bebas Neue', 'Courier New', monospace;
+  font-size: 1.2rem;
+  color: #fff;
+  letter-spacing: 2px;
+}
+
+.bita-contenido {
+  font-size: 11px;
+  color: #666;
+  line-height: 1.8;
+  letter-spacing: 0.5px;
+}
+
+.bita-tags {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.bita-tag {
+  font-size: 8px;
+  color: #0099cc;
+  border: 1px solid #0099cc22;
+  padding: 3px 8px;
+  letter-spacing: 1px;
+  background: #0099cc0a;
+}
+
+/* DIFICULTADES */
+.bitacora-dificultades {
+  padding: 40px 0;
+}
+
+.difi-entry {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 0 60px 16px;
+  background: #0d0d0d;
+  border: 1px solid #1a1a1a;
+  padding: 20px;
+}
+
+.difi-entry:hover {
+  border-color: #0099cc22;
+}
+
+.difi-problema,
+.difi-solucion {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.difi-label {
+  font-size: 8px;
+  letter-spacing: 3px;
+  color: #333;
+}
+
+.difi-problema .difi-label { color: #cc1100; }
+.difi-solucion .difi-label { color: #88cc00; }
+
+.difi-problema p,
+.difi-solucion p {
+  font-size: 11px;
+  color: #666;
+  line-height: 1.6;
+  letter-spacing: 0.5px;
+}
+
+.difi-arrow {
+  font-size: 1.5rem;
+  color: #0099cc;
+  flex-shrink: 0;
+}
+
+@media (max-width: 900px) {
+  .bitacora-section-label { padding: 0 24px; }
+  .migracion-grid { flex-direction: column; padding: 0 24px; }
+  .migracion-arrow { transform: rotate(90deg); }
+  .bita-entry { grid-template-columns: 1fr; margin: 0 24px; }
+  

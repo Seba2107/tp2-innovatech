@@ -1,0 +1,199 @@
+.explorador {
+  min-height: 100vh;
+  background: #0a0a0c;
+  background-image:
+    linear-gradient(rgba(42,42,54,0.5) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(42,42,54,0.5) 1px, transparent 1px);
+  background-size: 64px 64px;
+  font-family: 'Courier New', monospace;
+  padding-bottom: 60px;
+}
+
+.explorador-header {
+  padding: 40px 60px 30px;
+  border-bottom: 1px solid #1a1a1a;
+}
+
+.explorador-label {
+  font-size: 10px;
+  color: #0099cc;
+  letter-spacing: 4px;
+  margin-bottom: 8px;
+}
+
+.explorador-titulo {
+  font-family: 'Bebas Neue', 'Courier New', monospace;
+  font-size: clamp(3rem, 7vw, 6rem);
+  color: #fff;
+  letter-spacing: 4px;
+  line-height: 1;
+  text-shadow: 0 0 40px rgba(0,153,204,0.3);
+}
+
+.explorador-sub {
+  font-size: 11px;
+  color: #555;
+  letter-spacing: 3px;
+  margin-top: 8px;
+}
+
+/* FILTROS */
+.explorador-filtros {
+  padding: 24px 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border-bottom: 1px solid #1a1a1a;
+}
+
+.explorador-input {
+  background: #0d0d0d;
+  border: 1px solid #2a2a36;
+  color: #0099cc;
+  font-family: 'Courier New', monospace;
+  font-size: 13px;
+  letter-spacing: 2px;
+  padding: 12px 20px;
+  width: 100%;
+  max-width: 500px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.explorador-input::placeholder {
+  color: #333;
+}
+
+.explorador-input:focus {
+  border-color: #0099cc;
+  box-shadow: 0 0 20px rgba(0,153,204,0.1);
+}
+
+.explorador-categorias {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.cat-btn {
+  background: none;
+  border: 1px solid #2a2a36;
+  color: #555;
+  font-family: 'Courier New', monospace;
+  font-size: 10px;
+  letter-spacing: 2px;
+  padding: 6px 16px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.cat-btn:hover {
+  border-color: #0099cc;
+  color: #0099cc;
+}
+
+.cat-btn.activa {
+  background: #0099cc;
+  border-color: #0099cc;
+  color: #000;
+}
+
+/* CONTADOR */
+.explorador-contador {
+  padding: 12px 60px;
+  font-size: 10px;
+  color: #333;
+  letter-spacing: 2px;
+  border-bottom: 1px solid #111;
+}
+
+/* GRID */
+.explorador-grid {
+  padding: 30px 60px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.explorador-empty {
+  font-size: 12px;
+  color: #333;
+  letter-spacing: 3px;
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 60px 0;
+}
+
+/* TECH CARD */
+.tech-card {
+  background: #0d0d0d;
+  border: 1px solid #1a1a1a;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: all 0.2s;
+  cursor: default;
+}
+
+.tech-card:hover {
+  border-color: #0099cc;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0,153,204,0.1);
+}
+
+.tech-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tech-id {
+  font-size: 10px;
+  color: #333;
+  letter-spacing: 1px;
+}
+
+.tech-dificultad {
+  font-size: 9px;
+  letter-spacing: 1px;
+  padding: 3px 8px;
+  border: 1px solid;
+}
+
+.dif-básico    { color: #88cc00; border-color: #88cc00; }
+.dif-medio     { color: #ffaa00; border-color: #ffaa00; }
+.dif-avanzado  { color: #cc1100; border-color: #cc1100; }
+
+.tech-nombre {
+  font-family: 'Bebas Neue', 'Courier New', monospace;
+  font-size: 1.6rem;
+  color: #fff;
+  letter-spacing: 2px;
+  line-height: 1;
+}
+
+.tech-descripcion {
+  font-size: 11px;
+  color: #555;
+  line-height: 1.7;
+  flex: 1;
+}
+
+.tech-categoria {
+  font-size: 9px;
+  color: #0099cc;
+  letter-spacing: 2px;
+  border-top: 1px solid #111;
+  padding-top: 10px;
+}
+
+@media (max-width: 900px) {
+  .explorador-header,
+  .explorador-filtros,
+  .explorador-contador,
+  .explorador-grid {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}

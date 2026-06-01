@@ -1,0 +1,252 @@
+.perfil {
+  min-height: 100vh;
+  background: #0a0a0c;
+  background-image:
+    linear-gradient(rgba(42,42,54,0.5) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(42,42,54,0.5) 1px, transparent 1px);
+  background-size: 64px 64px;
+  font-family: 'Courier New', monospace;
+  padding-bottom: 60px;
+}
+
+/* HEADER */
+.perfil-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 40px 60px 0;
+  border-bottom: 2px solid;
+  position: relative;
+  overflow: hidden;
+}
+
+.perfil-header-left {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-bottom: 30px;
+}
+
+.perfil-player {
+  font-size: 11px;
+  letter-spacing: 4px;
+}
+
+.perfil-nombre {
+  font-family: 'Bebas Neue', 'Courier New', monospace;
+  font-size: clamp(3rem, 8vw, 7rem);
+  line-height: 0.9;
+  letter-spacing: 4px;
+}
+
+.perfil-rol {
+  font-size: 12px;
+  color: #555;
+  letter-spacing: 2px;
+}
+
+.perfil-meta {
+  display: flex;
+  gap: 24px;
+  font-size: 12px;
+  color: #888;
+}
+
+.perfil-redes {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+.perfil-red-btn {
+  text-decoration: none;
+  font-size: 10px;
+  letter-spacing: 1px;
+  padding: 6px 14px;
+  border: 1px solid;
+  transition: all 0.2s;
+}
+
+.perfil-red-btn:hover {
+  background: var(--color);
+  color: #000 !important;
+}
+
+.perfil-header-right {
+  flex-shrink: 0;
+}
+
+.perfil-avatar {
+  height: 320px;
+  width: auto;
+  object-fit: contain;
+  object-position: bottom;
+  mix-blend-mode: lighten;
+}
+
+/* SECCIONES */
+.perfil-section {
+  padding: 30px 60px;
+  border-bottom: 1px solid #1a1a1a;
+}
+
+.perfil-section-label {
+  font-size: 10px;
+  letter-spacing: 4px;
+  margin-bottom: 20px;
+  opacity: 0.8;
+}
+
+/* STATS */
+.stats-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  max-width: 600px;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.stat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stat-nombre {
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: #aaa;
+}
+
+.stat-valor {
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
+.stat-bar-bg {
+  height: 8px;
+  background: #1a1a1a;
+  position: relative;
+  overflow: hidden;
+}
+
+.stat-bar-fill {
+  height: 100%;
+  transition: width 1s ease;
+  position: relative;
+}
+
+/* DOUBLE SECTION */
+.perfil-double {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+}
+
+/* MEDIA LIST */
+.media-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.media-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 0;
+  border-bottom: 1px solid #111;
+  transition: background 0.2s;
+}
+
+.media-item:hover {
+  background: #0d0d0d;
+  padding-left: 8px;
+}
+
+.media-num {
+  font-size: 22px;
+  font-family: 'Bebas Neue', monospace;
+  opacity: 0.5;
+  width: 32px;
+  flex-shrink: 0;
+}
+
+.media-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+}
+
+.media-titulo {
+  font-size: 13px;
+  color: #eee;
+  letter-spacing: 1px;
+}
+
+.media-sub {
+  font-size: 10px;
+  color: #555;
+  letter-spacing: 1px;
+}
+
+.media-icon {
+  font-size: 18px;
+  opacity: 0.4;
+}
+
+/* VOLVER */
+.perfil-back {
+  padding: 40px 60px;
+}
+
+.back-btn {
+  text-decoration: none;
+  font-size: 11px;
+  letter-spacing: 3px;
+  padding: 12px 28px;
+  border: 1px solid;
+  transition: all 0.2s;
+  display: inline-block;
+}
+
+.back-btn:hover {
+  background: var(--color);
+  color: #000 !important;
+}
+
+.perfil-descripcion {
+  font-family: 'Bangers', cursive;
+  font-size: 18px;
+  color: #aaa;
+  line-height: 1.6;
+  max-width: 500px;
+  letter-spacing: 1.5px;
+  margin-top: 4px;
+}
+
+@media (max-width: 900px) {
+  .perfil-header {
+    flex-direction: column;
+    padding: 30px 24px 0;
+  }
+  .perfil-avatar {
+    height: 200px;
+  }
+  .perfil-section {
+    padding: 24px;
+  }
+  .perfil-double {
+    grid-template-columns: 1fr;
+  }
+  .perfil-back {
+    padding: 30px 24px;
+  }
+}
