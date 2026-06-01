@@ -1,6 +1,85 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import {
+  SiHtml5, SiCss, SiCssmodules, SiGithub, SiGit,
+  SiReact, SiJavascript, SiNodedotjs, SiMysql,
+  SiPython, SiExpress
+} from 'react-icons/si'
 import './Perfil.css'
+
+const ICONOS_MAP = {
+  SiHtml5:      SiHtml5,
+  SiCss:       SiCss,
+  SiCssmodules: SiCssmodules,
+  SiGithub:     SiGithub,
+  SiGit:        SiGit,
+  SiReact:      SiReact,
+  SiJavascript: SiJavascript,
+  SiNodedotjs:  SiNodedotjs,
+  SiMysql:      SiMysql,
+  SiPython:     SiPython,
+  SiExpress:    SiExpress,
+}
+
+function Carrusel({ proyectos, color }) {
+  const [actual, setActual] = useState(0)
+
+  const anterior = () => setActual((i) => (i === 0 ? proyectos.length - 1 : i - 1))
+  const siguiente = () => setActual((i) => (i === proyectos.length - 1 ? 0 : i + 1))
+
+  const proyecto = proyectos[actual]
+
+  return (
+    <div className="carrusel">
+      <div className="carrusel-track">
+
+        {/* Imagen o placeholder */}
+        <div className="carrusel-img-wrap" style={{ borderColor: color }}>
+          {proyecto.img
+            ? <img src={proyecto.img} alt={proyecto.titulo} className="carrusel-img" />
+            : (
+              <div className="carrusel-placeholder" style={{ color }}>
+                <span className="carrusel-placeholder-icon">{'</>'}</span>
+                <span className="carrusel-placeholder-label">PROYECTO</span>
+              </div>
+            )
+          }
+          <span className="carrusel-counter" style={{ backgroundColor: color }}>
+            {String(actual + 1).padStart(2, '0')} / {String(proyectos.length).padStart(2, '0')}
+          </span>
+        </div>
+
+        {/* Info */}
+        <div className="carrusel-info">
+          <p className="carrusel-num" style={{ color }}>// PROYECTO {String(actual + 1).padStart(2, '0')}</p>
+          <h3 className="carrusel-titulo">{proyecto.titulo}</h3>
+          <p className="carrusel-desc">{proyecto.descripcion}</p>
+        </div>
+
+      </div>
+
+      {/* Controles */}
+      <div className="carrusel-controles">
+        <button className="carrusel-btn" onClick={anterior} style={{ borderColor: color, color }}>
+          ← ANTERIOR
+        </button>
+        <div className="carrusel-dots">
+          {proyectos.map((_, i) => (
+            <button
+              key={i}
+              className={`carrusel-dot ${i === actual ? 'activo' : ''}`}
+              style={i === actual ? { backgroundColor: color } : {}}
+              onClick={() => setActual(i)}
+            />
+          ))}
+        </div>
+        <button className="carrusel-btn" onClick={siguiente} style={{ borderColor: color, color }}>
+          SIGUIENTE →
+        </button>
+      </div>
+    </div>
+  )
+}
 
 function Perfil({ integrante }) {
   const [barrasAnimadas, setBarrasAnimadas] = useState(false)
@@ -11,7 +90,7 @@ function Perfil({ integrante }) {
   }, [])
 
   const { player, nombre, rol, ciudad, edad, color, img,
-          habilidades, peliculas, discos, redes } = integrante
+          habilidades, proyectos, peliculas, discos, redes } = integrante
 
   return (
     <div className="perfil" style={{ '--color': color }}>
@@ -42,6 +121,26 @@ function Perfil({ integrante }) {
         </div>
       </div>
 
+      <div className="perfil-section">
+        <p className="perfil-section-label" style={{ color }}>// TECH STACK</p>
+        <div className="techstack-grid">
+          {habilidades.map((h) => {
+            const IconComp = ICONOS_MAP[h.icono]
+            return (
+              <div key={h.nombre} className="techstack-item" style={{ '--color': color }}>
+                <div className="techstack-icon-wrap">
+                  {IconComp
+                    ? <IconComp className="techstack-icon" />
+                    : <span className="techstack-icon-fallback">{'<>'}</span>
+                  }
+                </div>
+                <span className="techstack-nombre">{h.nombre}</span>
+              </div>
+            )
+          })}
+        </div>
+      </div>
+
       {/* POWER STATS */}
       <div className="perfil-section">
         <p className="perfil-section-label" style={{ color }}>// POWER STATS</p>
@@ -65,6 +164,14 @@ function Perfil({ integrante }) {
           ))}
         </div>
       </div>
+
+      {/* CARRUSEL DE PROYECTOS */}
+      {proyectos && proyectos.length > 0 && (
+        <div className="perfil-section">
+          <p className="perfil-section-label" style={{ color }}>// PROYECTOS</p>
+          <Carrusel proyectos={proyectos} color={color} />
+        </div>
+      )}
 
       {/* PELÍCULAS Y DISCOS */}
       <div className="perfil-double">

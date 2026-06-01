@@ -12,11 +12,31 @@ export const integrantes = [
     img: 'galeria/personajes/seba.png',
     descripcion: 'Hola! Soy Seba, estudiante de la Tecnicatura Superior en Desarrollo de Software. Me gusta la búsqueda y la creación de soluciones tecnológicas que simplifiquen problemas cotidianos. Estoy dando mis primeros pasos en el desarrollo web y me motiva aprender nuevas herramientas que me permitan crear interfaces simples, funcionales y atractivas.',
     habilidades: [
-      { nombre: 'HTML',       nivel: 80 },
-      { nombre: 'CSS',        nivel: 80 },
-      { nombre: 'GITHUB',     nivel: 80 },
-      { nombre: 'REACT',      nivel: 60 },
-      { nombre: 'JAVASCRIPT', nivel: 70 },
+      { nombre: 'HTML',       nivel: 80, icono: 'SiHtml5' },
+      { nombre: 'CSS',        nivel: 80, icono: 'SiCss' },
+      { nombre: 'GITHUB',     nivel: 80, icono: 'SiGithub' },
+      { nombre: 'REACT',      nivel: 60, icono: 'SiReact' },
+      { nombre: 'JAVASCRIPT', nivel: 70, icono: 'SiJavascript' },
+    ],
+    proyectos: [
+      {
+        id: 1,
+        titulo: 'Menú Semanal',
+        descripcion: 'App para organizar el menú familiar semanal. En el caso de tener trabajo con turnos rotativos, carga horarios y la app genera el menú en base a recetas precargadas por el usuario, junto con una lista de supermercado automática.',
+        img: 'galeria/proyectos/proyectoseba1.jpeg',
+      },
+      {
+        id: 2,
+        titulo: 'Lista de Tareas Simple',
+        descripcion: 'App web para organizar tareas del día a día. Permite agregar, completar y eliminar tareas. Desarrollada con HTML, CSS y JavaScript.',
+        img: 'galeria/proyectos/proyectoseba2.jpeg',
+      },
+      {
+        id: 3,
+        titulo: 'Portfolio Personal',
+        descripcion: 'Sitio web de presentación personal con secciones de habilidades, proyectos y contacto. Diseño responsive adaptado a mobile y desktop.',
+        img: 'galeria/proyectos/proyectoseba3.jpeg',
+      },
     ],
     peliculas: [
       { titulo: 'Volver al Futuro',  year: '1985' },
@@ -29,9 +49,9 @@ export const integrantes = [
       { titulo: 'Fuerza Natural',    artista: 'Gustavo Cerati' },
     ],
     redes: [
-      { nombre: 'GitHub',    url: 'https://github.com',  icono: 'GitHub' },
-      { nombre: 'LinkedIn',  url: 'https://linkedin.com',         icono: 'LinkedIn' },
-      { nombre: 'Instagram', url: 'https://instagram.com',        icono: 'Instagram' },
+      { nombre: 'GitHub',    url: 'https://github.com',   icono: 'GitHub' },
+      { nombre: 'LinkedIn',  url: 'https://linkedin.com', icono: 'LinkedIn' },
+      { nombre: 'Instagram', url: 'https://instagram.com',icono: 'Instagram' },
     ],
   },
   {
@@ -47,11 +67,31 @@ export const integrantes = [
     img: 'galeria/personajes/johan.png',
     descripcion: 'Soy Johan Matamoros, analista de sistemas que trabaja en el área de telecomunicaciones. Me considero una persona muy curiosa, con muchas ganas de aprender y seguir creciendo constantemente en el mundo de la tecnología. Actualmente estoy enfocado en convertirme en desarrollador, con el objetivo de poder hacer realidad muchas ideas que siempre tuve en mente. Me apasiona estudiar, aprender cosas nuevas y en mi tiempo libre disfruto del fútbol.',
     habilidades: [
-      { nombre: 'HTML5',      nivel: 85 },
-      { nombre: 'CSS3',       nivel: 85 },
-      { nombre: 'FLEXBOX',    nivel: 80 },
-      { nombre: 'GIT',        nivel: 75 },
-      { nombre: 'JAVASCRIPT', nivel: 70 },
+      { nombre: 'HTML5',      nivel: 85, icono: 'SiHtml5' },
+      { nombre: 'CSS3',       nivel: 85, icono: 'SiCss' },
+      { nombre: 'FLEXBOX',    nivel: 80, icono: 'SiCssmodules' },
+      { nombre: 'GIT',        nivel: 75, icono: 'SiGit' },
+      { nombre: 'JAVASCRIPT', nivel: 70, icono: 'SiJavascript' },
+    ],
+    proyectos: [
+      {
+        id: 1,
+        titulo: 'Landing de Estudio Creativo',
+        descripcion: 'Desarrollo de una página de presentación con secciones informativas, llamadas a la acción y una estética cuidada orientada a captar clientes.',
+        img: 'galeria/proyectos/proyectojohan1.jpg',
+      },
+      {
+        id: 2,
+        titulo: 'Dashboard Responsive',
+        descripcion: 'Maquetado de una interfaz administrativa con tarjetas, métricas y navegación adaptable para desktop, tablet y dispositivos móviles.',
+        img: 'galeria/proyectos/proyectojohan2.jpg',
+      },
+      {
+        id: 3,
+        titulo: 'Gestor de Contactos',
+        descripcion: 'Aplicación para registrar y organizar contactos con búsqueda en tiempo real, edición inline y persistencia en localStorage.',
+        img: 'galeria/proyectos/proyectojohan3.png',
+      },
     ],
     peliculas: [
       { titulo: 'Interstellar',                      year: '2014' },
@@ -82,11 +122,31 @@ export const integrantes = [
     img: 'galeria/personajes/juanpablo.png',
     descripcion: 'Mis primeros pasos en el mundo de la programación los di usando lenguaje C. Con distintas formaciones y cursos aprendí diversos lenguajes. Me apasiona la programación y todo lo que implica crear soluciones desde cero, entender cómo funcionan las cosas por detrás y resolver problemas reales a través del código. Me considero una persona en constante aprendizaje, siempre buscando mejorar mis habilidades y enfrentar desafíos que me ayuden a crecer.',
     habilidades: [
-      { nombre: 'NODE.JS',    nivel: 80 },
-      { nombre: 'MYSQL',      nivel: 85 },
-      { nombre: 'PYTHON',     nivel: 75 },
-      { nombre: 'EXPRESS',    nivel: 75 },
-      { nombre: 'JAVASCRIPT', nivel: 70 },
+      { nombre: 'NODE.JS',    nivel: 80, icono: 'SiNodedotjs' },
+      { nombre: 'MYSQL',      nivel: 85, icono: 'SiMysql' },
+      { nombre: 'PYTHON',     nivel: 75, icono: 'SiPython' },
+      { nombre: 'EXPRESS',    nivel: 75, icono: 'SiExpress' },
+      { nombre: 'JAVASCRIPT', nivel: 70, icono: 'SiJavascript' },
+    ],
+    proyectos: [
+      {
+        id: 1,
+        titulo: 'Sispol WEB',
+        descripcion: 'Sistema de control de operaciones de la Policía de Tucumán. Desarrollado con tecnologías web modernas: Node.js, Express.js, MySQL y EJS.',
+        img: 'galeria/proyectos/proyectojuanpablo1.png',
+      },
+      {
+        id: 2,
+        titulo: 'Tucu Clima',
+        descripcion: 'Sitio web para consultar el clima de cualquier ciudad del mundo, integrando APIs de servicios meteorológicos de terceros.',
+        img: 'galeria/proyectos/proyectojuanpablo2.png',
+      },
+      {
+        id: 3,
+        titulo: 'API REST de Productos',
+        descripcion: 'Backend con Node.js y Express para gestión de productos con endpoints CRUD completos, autenticación JWT y base de datos MySQL.',
+        img: 'galeria/proyectos/proyectojuanpablo3.png',
+      },
     ],
     peliculas: [
       { titulo: 'Así en la Tierra como en el Infierno', year: '2024' },
