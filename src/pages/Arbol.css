@@ -22,7 +22,7 @@
 }
 
 .arbol-titulo {
-  font-family: 'Bebas Neue', 'Courier New', monospace;
+  font-family: 'Bangers', 'Courier New', monospace;
   font-size: clamp(3rem, 7vw, 6rem);
   color: #fff;
   letter-spacing: 4px;
@@ -206,7 +206,7 @@
 }
 
 .hook-nombre {
-  font-family: 'Bebas Neue', 'Courier New', monospace;
+  font-family: 'Bangers', 'Courier New', monospace;
   font-size: 1.4rem;
   color: #0099cc;
   letter-spacing: 2px;
